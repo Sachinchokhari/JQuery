@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS Styles */
+        #span {
+            color: rgb(248, 234, 234); 
+        }
+    </style>
+</head>
+<body>
+    <div id="great-great-grandparent" style="border: 2px solid red; padding: 20px;">
+       body (great-great-grandparent)
+
+        <div id="great-grandparent" style="border: 2px solid red; padding: 20px;">
+            div (great-grandparent)
+
+            <div id="grandparent" style="border: 2px solid red; padding: 20px;">
+                Grandparent
+
+                <div id="parent" style="border: 2px solid red; padding: 20px;">
+                    ul (parent)
+
+                    <div id="child" style="border: 2px solid red; padding: 20px;">
+                        li (child)
+                    
+                        <div id="span" style="border: 2px solid rgb(248, 234, 234); padding: 20px;">
+                            <span>span</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Add click event listeners using jQuery
+        $('#great-great-grandparent').click(function() {
+            console.log('Grandparent says: "Ha"');
+        });
+
+        $('#great-grandparent').click(function() {
+            console.log('Grandparent says: "Haha, "');
+        });
+
+        $('#grandparent').click(function() {
+            console.log('Grandparent says: "Haha, tickles!"');
+        });
+
+        $('#parent').click(function() {
+            console.log('Parent says: "Tickle, tickle!"');
+        });
+
+        $('#child').click(function() {
+            console.log('Child says: "Stop, I\'m ticklish!"');
+        });
+    </script>
+</body>
+</html>
